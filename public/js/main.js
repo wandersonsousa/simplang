@@ -15,7 +15,7 @@ window.onload = function () {
         `;
     }
     async function compile() {
-        let instrunctions_code = editor.getValue().split('\n');
+        let instrunctions_code = editor.getValue().toLowerCase().split('\n');
         let instrunctions = {};
         for await (let [i, instrunction] of instrunctions_code.entries()) {
             instrunctions[i + 1] = instrunction;

@@ -70,23 +70,19 @@
                     </div>
                 </ul>
             </div>
-            <div class="col-12 col-md-4 mt-2 text-center">
+            <div class="col-12 col-md-4 mt-2 ">
+                <div class="alert alert-danger d-none" id="error_log" role="alert"></div>
                 <button type="button" class="btn btn-primary disabled">
                     Valor do registrador <span class="badge bg-secondary" id="register_text">0</span>
                 </button>
+                <div class="btn-group mt-4">
+                    <button class="btn btn-primary" id="compile_btn">Executar</button>
+                    <button class="btn btn-secondary" id="step_btn">Passo a Passo</button>
+                    <button class="btn btn-danger" id="stop">Parar</button>
+                </div>
+
             </div>
         </div>
-        <div class="row">
-            <div class="col-12 text-center mt-5">
-                <div class="alert alert-danger d-none" id="error_log" role="alert"></div>
-
-                <button class="btn btn-primary" id="compile_btn">Executar</button>
-                <button class="btn btn-primary" id="step_btn">Passo a Passo</button>
-                <button class="btn btn-danger" id="stop">Parar</button>
-            </div>
-
-        </div>
-
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
