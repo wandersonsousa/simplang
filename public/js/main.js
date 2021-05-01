@@ -1,6 +1,9 @@
 window.onload = function () {
     const URL = window.origin + '/compile.php';
     var memoryStates = [];
+
+    document.getElementById('doc_url').setAttribute('href', origin + '/public/doc/documentation.pdf');
+
     let editor = CodeMirror(document.getElementById('codeeditor'), {
         theme: 'mdn-like',
         tabSize: 4,
