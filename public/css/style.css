@@ -9,3 +9,9 @@
         height: calc(100vh - 30vh);
     }
 }
+
+@media (max-width:600px) {
+    #mem_col{
+        margin-top: 1em;
+    }
+}

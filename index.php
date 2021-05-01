@@ -58,10 +58,26 @@
             </div>
         </nav>
         <div class="row mt-4" id="app_row">
+
             <div class="col-12 col-md-4 border-end" id="codeeditor">
                 <h5>Código</h5>
             </div>
-            <div class="col-12 col-md-4">
+
+
+            <div class="col-12 col-md-4 mt-2 text-center">
+                <div class="alert alert-danger d-none" id="error_log" role="alert"></div>
+                <div class="btn-group">
+                    <button class="btn btn-primary" id="compile_btn">Executar</button>
+                    <button class="btn btn-secondary" id="step_btn">Passo a Passo</button>
+                    <button class="btn btn-danger" id="stop">Parar</button>
+                </div>
+
+                <button type="button" class="btn btn-primary mt-1 disabled">
+                    Valor do registrador <span class="badge bg-secondary" id="register_text">0</span>
+                </button>
+            </div>
+
+            <div class="col-12 col-md-4 text-center" id="mem_col">
                 <h5>Memória</h5>
                 <ul class="list-group" id="">
                     <li class="list-group-item disabled" aria-disabled="true">Address - Value</li>
@@ -69,18 +85,6 @@
 
                     </div>
                 </ul>
-            </div>
-            <div class="col-12 col-md-4 mt-2 ">
-                <div class="alert alert-danger d-none" id="error_log" role="alert"></div>
-                <button type="button" class="btn btn-primary disabled">
-                    Valor do registrador <span class="badge bg-secondary" id="register_text">0</span>
-                </button>
-                <div class="btn-group mt-4">
-                    <button class="btn btn-primary" id="compile_btn">Executar</button>
-                    <button class="btn btn-secondary" id="step_btn">Passo a Passo</button>
-                    <button class="btn btn-danger" id="stop">Parar</button>
-                </div>
-
             </div>
         </div>
 
