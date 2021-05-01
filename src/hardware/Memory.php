@@ -10,7 +10,7 @@ class Memory implements MemoryInterface
     }
     private function createCells()
     {
-        for ($i=1; $i < 99; $i++) {
+        for ($i=0; $i < 99; $i++) {
             $cells[$i] = null;
         }
         return $cells;

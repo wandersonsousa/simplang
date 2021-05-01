@@ -1,119 +1,121 @@
-LOAD 1
-ADDI 10
-STORE 91 
-LOAD 1
-ADDI 8
-STORE 92
-LOAD 1
-ADDI 15
-STORE 93 
-LOAD 1
-ADDI 4
-STORE 94 
-LOAD 1 
-ADDI 1
-STORE 95 
-LOAD 1
-ADDI 1
-STORE 96           
-LOAD 96             
-SUBI 5 
-JZERO 120 
-LOAD 96
-STORE 97 
-LOAD 97 
-ADDI 1 
-STORE 97 
-SUBI 6
-JZERO 116 
-LOAD 96 
-SUBI 1 
-JPOS 34
-LOAD 91 
-JUMP 47 
-SUBI 1
-JPOS 38 
-LOAD 92	
-JUMP 47
-SUBI 1 
-JPOS 42 
-LOAD 93
-JUMP 47
-SUBI 1 
-JPOS 46
-LOAD 94 
-JUMP 47 
-LOAD 95
-STORE 98 
-LOAD 97 
-SUBI 2 
-JPOS 53
-LOAD 92
-JUMP 62 
-SUBI 1 
-JPOS 58
-LOAD 93 
-JUMP 62 
-SUBI 1
-JPOS 61 
-LOAD 94 
-JUMP 62 
-LOAD 95 
-STORE 99 
-LOAD 99
-SUB 98
-JPOS 24 
-LOAD 98
-STORE 100
-LOAD 98 
-SUB 98 
-ADD 99 
-LOAD 99
-SUB 99 
-ADD 100 
-LOAD 96  
-SUBI 1
-JPOS 79 
-LOAD 98  
-STORE 91
-JUMP 97
-SUBI 1 
-JPOS 83 
-LOAD 98	
-STORE 92
-JUMP 97
-SUBI 1
-JPOS 87
-LOAD 98	
-STORE 93 
-JUMP 97 
-SUBI 1
-JPOS 95 
-LOAD 98
-STORE 94 
-JUMP 97 
-LOAD 98 
-STORE 95
-LOAD 97
-SUBI 2 
-JPOS 103
-LOAD 99
-STORE 92 
-JUMP 115
-SUBI 1
-JPOS 108 
-LOAD 99
-STORE 93
-JUMP 115 
-SUBI 1 
-JPOS 113 
-LOAD 99
-STORE 94 
-JUMP 115
-LOAD 99
-STORE 95 
-JUMP 24 
-LOAD 96 
-ADDI 1
-STORE 96
-JUMP 19 
+load 0
+addi 10
+store 91  // carrega o conteúdo 10 na posição 1 do vetor
+load 0
+addi 3
+store 92  // carrega o conteúdo 3  na posição 2 do vetor
+load 0
+addi 6
+store 93  // carrega o conteúdo 6  na posição 3 do vetor
+load 0
+addi 8
+store 94  // carrega o conteudo 8  na posição 4 do vetor
+load 0
+addi 1
+store 95  // carrega o conteúdo 1  na posição 5 do vetor
+load 0
+addi 1
+store 96  // carrega o conteúdo 1  na variavel 'i'
+load 96 // inicio do for externo
+subi 4
+jpos 122 // pula para o fim do for externo
+load 96
+store 97
+load 97 // inicio do for interno
+addi 1
+store 97
+subi 5
+jpos 117 // pula para o fim do for interno
+load 96  // pega o valor na posição i [96]
+subi 1 // inicio de um if
+jpos 34 // pula para o fim desse if
+load 91
+jump 47 // pula para o fim desse switch
+subi 1 // inicio de um if
+jpos 38 // pula para o fim desse if
+load 92
+jump 47 // pula para o fim desse switch
+subi 1 // inicio de um if
+jpos 42 // pula para o fim desse if
+load 93
+jump 47 // pula para o fim desse switch
+subi 1 // inicio de um if
+jpos 46 // pula para o fim desse if
+load 94
+jump 47 // pula para o fim desse switch
+load 95
+store 98 // carrega o valor A[i]
+load 97  // pega o valor na posição j [97]
+subi 1 // inicio de um if
+jpos 53 // pula para o fim desse if
+load 91
+jump 66 // pula para o fim desse switch
+subi 1 // inicio de um if
+jpos 57 // pula para o fim desse if
+load 92
+jump 66 // pula para o fim desse switch
+subi 1 // inicio de um if
+jpos 61 // pula para o fim desse if
+load 93
+jump 66 // pula para o fim desse switch
+subi 1 // inicio de um if
+jpos 65 // pula para o fim desse if
+load 94
+jump 66 // pula para o fim desse switch
+load 95
+store 99 // carrega o valor A[j]
+load 99
+sub 98
+jpos 116 // pula para o fim desse switch
+load 96  // pega o valor na posição i [96]
+subi 1 // inicio de um if
+jpos 76 // pula para o fim desse if
+load 99
+store 91
+jump 93 // pula para o fim desse switch
+subi 1 // inicio de um if
+jpos 81 // pula para o fim desse if
+load 99
+store 92
+jump 93 // pula para o fim desse switch
+subi 1 // inicio de um if
+jpos 86 // pula para o fim desse if
+load 99
+store 93
+jump 93 // pula para o fim desse switch
+subi 1 // inicio de um if
+jpos 91 // pula para o fim desse if
+load 99
+store 94
+jump 93 // pula para o fim desse switch
+load 99
+store 95
+load 97  // pega o valor na posição i [97]
+subi 1 // inicio de um if
+jpos 99 // pula para o fim desse if
+load 98
+store 91
+jump 116 // pula para o fim desse switch
+subi 1 // inicio de um if
+jpos 104 // pula para o fim desse if
+load 98
+store 92
+jump 116 // pula para o fim desse switch
+subi 1 // inicio de um if
+jpos 109 // pula para o fim desse if
+load 98
+store 93
+jump 116 // pula para o fim desse switch
+subi 1 // inicio de um if
+jpos 114 // pula para o fim desse if
+load 98
+store 94
+jump 116 // pula para o fim desse switch
+load 98
+store 95
+jump 24 // pula para o início do for interno
+load 96 // fim do for interno
+addi 1
+store 96
+jump 19 // pula para o início do for externo
+// fim do for externo
