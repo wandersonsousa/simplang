@@ -1,7 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos </title>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,18 +30,10 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="./lib/codemirror.css">
-    <link rel="stylesheet" href="./lib/theme/mdn-like.css">
-    <link rel="stylesheet" href="./public/css/style.css">
-
-    <script src="./lib/codemirror.js"></script>
-    <script src="./lib/mode/javascript/javascript.js"></script>
-
-    <title>SimpLang</title>
 </head>
 
 <body>
+
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
@@ -56,48 +53,103 @@
                             <a class="nav-link" target="_blank" href="https://github.com/wandersonsousa">Mais
                                 projetos</a>
                         </li>
-
-
                     </ul>
                 </div>
             </div>
         </nav>
-        <div class="row mt-4" id="app_row">
-
-            <div class="col-12 col-md-4 border-end" id="codeeditor">
-                <h5>Código</h5>
-            </div>
 
 
-            <div class="col-12 col-md-4 mt-2 text-center">
-                <div class="alert alert-danger d-none" id="error_log" role="alert"></div>
-                <div class="btn-group">
-                    <button class="btn btn-primary" id="compile_btn">Executar</button>
-                    <button class="btn btn-secondary" id="step_btn">Passo a Passo</button>
-                    <button class="btn btn-danger" id="stop">Parar</button>
+        <div class="row mt-4">
+            <div class="col-4">
+                <div class="mb-4">
+                    <label for="exampleFormControlTextarea1" class="form-label">Salvando o inteiro 10, na memória: </label>
+                    <textarea class="form-control" readonly name="first_example" id="first_example" cols="10" rows="5">
+
+                            load 1
+                            addi 10
+                            store 1
+                    </textarea>
+
                 </div>
-                <button type="button" class="btn btn-primary mt-1 disabled">
-                    Valor do registrador <span class="badge bg-secondary" id="register_text">0</span>
-                </button>
-            </div>
+                <div>
+                    <label for="exampleFormControlTextarea1" class="form-label">Fazendo for de 0 até 2: </label>
+                    <textarea class="form-control" readonly name="first_example" id="first_example" cols="10" rows="11">
+                            load 1
+                            subi 2
+                            jzero 11
+                            load 2
+                            addi 10
+                            store 2
+                            load 1
+                            addi 1
+                            store 1
+                            jump 1
+                    </textarea>
 
-            <div class="col-12 col-md-4 text-center" id="mem_col">
-                <h5>Memória</h5>
-                <ul class="list-group" id="">
-                    <li class="list-group-item disabled" aria-disabled="true">Address - Value</li>
-                    <div id="memoryList">
+                </div>
+
+            </div>
+            <div class="col-4">
+                <div class="mb-4">
+                    <label for="exampleFormControlTextarea1" class="form-label">Fazendo um if A > B: </label>
+                    <textarea class="form-control" readonly name="first_example" id="first_example" cols="10" rows="18">
+                            load 1 
+                            addi 10
+                            store 1
+                            load 2
+                            addi 9
+                            store 2
+                            load 1
+                            sub 2
+                            jpos 14
+                            load 3
+                            addi 0
+                            store 3
+                            jump 17
+                            load 3
+                            addi 1
+                            store 3
+                    </textarea>
+
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="mb-4">
+                    <div>
+                        <label for="exampleFormControlTextarea1" class="form-label">Instanciando array de três elementos: </label>
+                        <textarea class="form-control" readonly name="first_example" id="first_example" cols="10" rows="11">
+                            load 1
+                            addi 10
+                            store 1
+                            load 2
+                            addi 20
+                            store 2
+                            load 3
+                            addi 30
+                            store 3
+                    </textarea>
 
                     </div>
-                </ul>
+
+                </div>
             </div>
+
+
         </div>
 
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <script>
+        window.onload = function() {
+            document.getElementById('doc_url').setAttribute('href', origin + '/public/doc/documentation.pdf');
+        }
+    </script>
 </body>
 
 </html>
-
-<script src="./public/js/main.js"></script>

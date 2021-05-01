@@ -6,7 +6,7 @@ window.onload = function () {
 
     let editor = CodeMirror(document.getElementById('codeeditor'), {
         theme: 'mdn-like',
-        tabSize: 4,
+        tabSize: 0,
         lineNumbers: true,
         lineWrapping: true
     });
@@ -18,7 +18,7 @@ window.onload = function () {
         `;
     }
     async function compile() {
-        let instrunctions_code = editor.getValue().toLowerCase().split('\n');
+        let instrunctions_code = editor.getValue().toLowerCase().split('\n').map(intrunctionLine => intrunctionLine.trim());
         let instrunctions = {};
         for await (let [i, instrunction] of instrunctions_code.entries()) {
             instrunctions[i + 1] = instrunction;
