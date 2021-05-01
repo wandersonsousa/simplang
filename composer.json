@@ -2,11 +2,6 @@
     "name": "wanderson/simplang",
     "description": "simple low level lang",
     "type": "project",
-    "require": {
-        "guzzlehttp/guzzle": "^7.0",
-        "symfony/dom-crawler": "^5.2",
-        "symfony/css-selector": "^5.2"
-    },
     "license": "MIT",
     "authors": [
         {
