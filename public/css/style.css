@@ -1,0 +1,11 @@
+@media (min-width: 600px) {
+    html, body {
+        height: 100vh;
+    }
+    .CodeMirror {
+        height: 100%;
+    }
+    #app_row {
+        height: calc(100vh - 30vh);
+    }
+}
