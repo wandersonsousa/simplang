@@ -34,6 +34,19 @@
     <script src="./lib/mode/javascript/javascript.js"></script>
 
     <title>SimpLang</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-92JQ4VB5LL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-92JQ4VB5LL');
+    </script>
 </head>
 
 <body>
