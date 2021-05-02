@@ -89,7 +89,7 @@
                     <button class="btn btn-secondary" id="step_btn">Passo a Passo</button>
                     <button class="btn btn-danger" id="stop">Parar</button>
                 </div>
-                <button type="button" class="btn btn-primary mt-1 disabled">
+                <button type="button" class="btn btn-outline-primary btn-lg mt-3 disabled">
                     Valor do registrador <span class="badge bg-secondary" id="register_text">0</span>
                 </button>
             </div>
