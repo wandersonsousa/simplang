@@ -166,3 +166,19 @@
 </body>
 
 </html>
+
+
+load 1
+addi 10
+store 1
+load 1
+sub 10
+jzero 14
+load 2
+addi 1
+store 2
+load 1
+subi 1
+store 1
+jump 4
+                    

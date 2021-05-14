@@ -38,12 +38,12 @@ class CPU
     {
         $this->register->set($this->register->get() - $value);
     }
-    public function mult(int $address)
+    public function mul(int $address)
     {
         $addrPointerValue = $this->memory->get($address);
         $this->register->set($this->register->get() * $addrPointerValue);
     }
-    public function multi(int $value)
+    public function muli(int $value)
     {
         $this->register->set($this->register->get() * $value);
     }
