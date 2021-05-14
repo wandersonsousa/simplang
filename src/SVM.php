@@ -47,7 +47,7 @@ class SVM
             $argument = $instructionSplited[1];
             $langCommands = [
                 'store', 'load', 'add', 'addi', 'sub', 'subi',
-                'mult', 'muli', 'div', 'divi', 'jump', 'jpos', 'jzero'
+                'mul', 'muli', 'div', 'divi', 'jump', 'jpos', 'jzero'
             ];
             foreach ($langCommands as $availableCommand) {
                 if ($command == $availableCommand) {
