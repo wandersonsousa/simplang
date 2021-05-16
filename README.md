@@ -24,7 +24,7 @@ Antes de iniciar precisamos definir algumas considerações a respeito do ambien
 Mapa de caractéres: N = posição de célula na memória, I = um número inteiro qualquer.
 
 É só isso, agora vamos lá:
-- load - carrega um valor da memória no registrador
+- load N - carrega um valor da memória no registrador
 - add N - adiciona o valor de N ao valor no registrador
 - sub N - subtrai o valor de N ao valor no registrador
 - div N - divide o valor de N pelo valor no registrador
