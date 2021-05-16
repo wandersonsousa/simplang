@@ -4,6 +4,11 @@
 ![](https://img.shields.io/github/languages/code-size/wandersonsousa/simplang?style=centerme) ![](https://img.shields.io/github/issues-raw/wandersonsousa/simplang?style=centerme)
 
 
+
+
+
+
+
 ![](https://i.ibb.co/FVYMBfh/ezgif-com-gif-maker.gif")
 
 Simplang é um ambiente online para execução de pseudo-código que simula uma linguagem de máquina.
