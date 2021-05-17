@@ -11,6 +11,8 @@ window.onload = function () {
         lineWrapping: true
     });
 
+    editor.setValue(`load 0\naddi 10\nstore 0\nload 0\njzero 13\nload 1\naddi 10\nstore 1\nload 0\nsubi 1\nstore 0\njump 4`);
+
     function setAsLoading(id) {
         document.getElementById(id).innerHTML = `
         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
