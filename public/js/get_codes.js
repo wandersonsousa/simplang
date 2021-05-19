@@ -2,9 +2,9 @@ window.addEventListener("load", function () {
     let usersRef = firebase.database().ref('users');
     window.code_list = [];
 
-    usersRef.on('value', async (snapshot) => {
+    usersRef.once('value', async (snapshot) => {
         const data = await snapshot.val();
-
+        document.getElementById('code_container').innerHTML = '';
 
         for (userData of Object.entries(data)) {
             let username = userData[0];
