@@ -60,6 +60,9 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
+                            <a class="nav-link" href="/algorithms.php">ALGORITMOS</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" target="_blank" href="#" id="doc_url">Documentação</a>
                         </li>
                         <li class="nav-item">
@@ -84,6 +87,7 @@
 
             <div class="col-12 col-md-4 mt-2 text-center">
                 <div class="alert alert-danger d-none" id="error_log" role="alert"></div>
+                <div class="alert alert-success d-none" id="success_log" role="alert"></div>
                 <div class="btn-group">
                     <button class="btn btn-primary" id="compile_btn">Executar</button>
                     <button class="btn btn-secondary" id="step_btn">Passo a Passo</button>
@@ -92,6 +96,7 @@
                 <button type="button" class="btn btn-outline-primary btn-lg mt-3 disabled">
                     Valor do registrador <span class="badge bg-secondary" id="register_text">0</span>
                 </button>
+                <button type="button" class="btn btn-outline-success mt-3" data-bs-toggle="modal" data-bs-target="#modal_save_alg">Salvar Algoritmo</button>
             </div>
 
             <div class="col-12 col-md-4 text-center" id="mem_col">
@@ -106,11 +111,79 @@
         </div>
 
     </div>
+
+
+    <div class="modal" id="modal_save_alg" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Salvar Algoritmo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" aria-describedby="usernameHelp">
+                            <div id="usernameHelp" class="form-text">Seus algoritmos serão associados a este username</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="alg_name" class="form-label">Nome do algoritmo</label>
+                            <input type="text" class="form-control" id="alg_name">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" id="save_algorithm" data-bs-dismiss="modal" class="btn btn-success">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyABkwsK-IEhFpwRcw8TtSVhAnPGBXkOm7s",
+            authDomain: "simplang-69b7f.firebaseapp.com",
+            databaseURL: "https://simplang-69b7f-default-rtdb.firebaseio.com",
+            projectId: "simplang-69b7f",
+            storageBucket: "simplang-69b7f.appspot.com",
+            messagingSenderId: "661645233856",
+            appId: "1:661645233856:web:72fdd4fecc8b86a4bf2725"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        function findGetParameter(parameterName) {
+            var result = null,
+                tmp = [];
+            location.search
+                .substr(1)
+                .split("&")
+                .forEach(function(item) {
+                    tmp = item.split("=");
+                    if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+                });
+            return result;
+        }
+    </script>
 </body>
 
 </html>
 
+
 <script src="./public/js/main.js"></script>
+<script src="./public/js/save_code.js"></script>

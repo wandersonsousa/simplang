@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplos </title>
+    <title>Algoritmos</title>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -30,7 +30,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-92JQ4VB5LL"></script>
     <script>
@@ -76,98 +76,43 @@
             </div>
         </nav>
 
-
-        <div class="row mt-4">
-            <div class="col-4">
-                <div class="mb-4">
-                    <label for="exampleFormControlTextarea1" class="form-label">Salvando o inteiro 10, na memória: </label>
-                    <textarea class="form-control" readonly name="first_example" id="first_example" cols="10" rows="5">
-
-                            load 1
-                            addi 10
-                            store 1
-                    </textarea>
-
-                </div>
-                <div>
-                    <label for="exampleFormControlTextarea1" class="form-label">Fazendo for de 0 até 2: </label>
-                    <textarea class="form-control" readonly name="first_example" id="first_example" cols="10" rows="11">
-                            load 1
-                            subi 2
-                            jzero 11
-                            load 2
-                            addi 10
-                            store 2
-                            load 1
-                            addi 1
-                            store 1
-                            jump 1
-                    </textarea>
-
-                </div>
-
+        <div class="container" id="code_container">
+            <div class="row">
             </div>
-            <div class="col-4">
-                <div class="mb-4">
-                    <label for="exampleFormControlTextarea1" class="form-label">Fazendo um if A > B: </label>
-                    <textarea class="form-control" readonly name="first_example" id="first_example" cols="10" rows="18">
-                            load 1 
-                            addi 10
-                            store 1
-                            load 2
-                            addi 9
-                            store 2
-                            load 1
-                            sub 2
-                            jpos 14
-                            load 3
-                            addi 0
-                            store 3
-                            jump 17
-                            load 3
-                            addi 1
-                            store 3
-                    </textarea>
-
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="mb-4">
-                    <div>
-                        <label for="exampleFormControlTextarea1" class="form-label">Instanciando array de três elementos: </label>
-                        <textarea class="form-control" readonly name="first_example" id="first_example" cols="10" rows="11">
-                            load 1
-                            addi 10
-                            store 1
-                            load 2
-                            addi 20
-                            store 2
-                            load 3
-                            addi 30
-                            store 3
-                    </textarea>
-
-                    </div>
-
-                </div>
-            </div>
-
 
         </div>
 
+
+
     </div>
 
-    
 
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+
 
     <script>
         window.onload = function() {
             document.getElementById('doc_url').setAttribute('href', origin + '/public/doc/documentation.pdf');
-        }
+            var firebaseConfig = {
+                apiKey: "AIzaSyABkwsK-IEhFpwRcw8TtSVhAnPGBXkOm7s",
+                authDomain: "simplang-69b7f.firebaseapp.com",
+                databaseURL: "https://simplang-69b7f-default-rtdb.firebaseio.com",
+                projectId: "simplang-69b7f",
+                storageBucket: "simplang-69b7f.appspot.com",
+                messagingSenderId: "661645233856",
+                appId: "1:661645233856:web:72fdd4fecc8b86a4bf2725"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+        };
     </script>
+
+    <script src="./public/js/get_codes.js"></script>
 </body>
 
 </html>

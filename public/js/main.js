@@ -1,17 +1,23 @@
-window.onload = function () {
+window.addEventListener("load", function () {
     const URL = window.origin + '/compile.php';
     var memoryStates = [];
 
     document.getElementById('doc_url').setAttribute('href', origin + '/public/doc/documentation.pdf');
 
-    let editor = CodeMirror(document.getElementById('codeeditor'), {
+    window.editor = CodeMirror(document.getElementById('codeeditor'), {
         theme: 'mdn-like',
         tabSize: 0,
         lineNumbers: true,
         lineWrapping: true
     });
 
-    editor.setValue(`load 0\naddi 10\nstore 0\nload 0\njzero 13\nload 1\naddi 10\nstore 1\nload 0\nsubi 1\nstore 0\njump 4`);
+    let code = findGetParameter('code');
+    if( code ){
+        editor.setValue(code);
+    }else{
+        editor.setValue(`load 0\naddi 10\nstore 0\nload 0\njzero 13\nload 1\naddi 10\nstore 1\nload 0\nsubi 1\nstore 0\njump 4`);
+    }
+    
 
     function setAsLoading(id) {
         document.getElementById(id).innerHTML = `
@@ -19,12 +25,16 @@ window.onload = function () {
         <span >compilando...</span>
         `;
     }
-    async function compile() {
+    window.getInstructions = async function(){
         let instrunctions_code = editor.getValue().toLowerCase().split('\n').map(intrunctionLine => intrunctionLine.trim());
         let instrunctions = {};
-        for await (let [i, instrunction] of instrunctions_code.entries()) {
+        for (let [i, instrunction] of instrunctions_code.entries()) {
             instrunctions[i + 1] = instrunction;
         }
+        return instrunctions;
+    }
+    async function compile() {
+        let instrunctions = await getInstructions();
         const res = await axios({
             method: 'post',
             url: URL,
@@ -133,4 +143,4 @@ window.onload = function () {
 
     }
 
-}
+})
