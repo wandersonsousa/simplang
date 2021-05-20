@@ -5,14 +5,14 @@ window.addEventListener("load", function () {
     usersRef.once('value', async (snapshot) => {
         const data = await snapshot.val();
         document.getElementById('code_container').innerHTML = '';
-
+        let count = 0;
         for (userData of Object.entries(data)) {
             let username = userData[0];
             let userCodeData = userData[1]['algoritmos'];
 
             let algsIds = Object.keys(userCodeData);
 
-            let count = 0;
+            
             for (const id of algsIds) {
                 let codeData = userCodeData[id];
                 codeData.id = count;
@@ -23,7 +23,7 @@ window.addEventListener("load", function () {
             }
         }
 
-        let count = 1;
+        count = 1;
         let $currentRow;
         for (const code_data of window.code_list) {
             if (count == 1) {
