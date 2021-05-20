@@ -11,9 +11,9 @@ window.addEventListener("load", function () {
         lineWrapping: true
     });
 
-    let code = findGetParameter('code');
-    if( code ){
-        editor.setValue(code);
+    let code = findGetParameter();
+    if( code){
+        editor.setValue(code.trim());
     }else{
         editor.setValue(`load 0\naddi 10\nstore 0\nload 0\njzero 13\nload 1\naddi 10\nstore 1\nload 0\nsubi 1\nstore 0\njump 4`);
     }

@@ -167,17 +167,9 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
 
-        function findGetParameter(parameterName) {
-            var result = null,
-                tmp = [];
-            location.search
-                .substr(1)
-                .split("&")
-                .forEach(function(item) {
-                    tmp = item.split("=");
-                    if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
-                });
-            return result;
+        function findGetParameter() {
+            let res = location.search.split('code=')[1];
+            return res?decodeURI(res):false;
         }
     </script>
 </body>
