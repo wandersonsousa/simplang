@@ -3,7 +3,7 @@
 
 ![](https://img.shields.io/github/languages/code-size/wandersonsousa/simplang?style=centerme) ![](https://img.shields.io/github/issues-raw/wandersonsousa/simplang?style=centerme)
 
-<br><br><br><br>
+<br><br>
 
 ![](https://i.ibb.co/FVYMBfh/ezgif-com-gif-maker.gif")
 
