@@ -1,6 +1,5 @@
 ![](https://dewey.tailorbrands.com/production/brand_version_mockup_image/278/5280378278_b5fda336-6ab8-4a2e-9f9c-83388e0e0d05.png?cb=1621176696?style=centerme)
 
-
 ![](https://img.shields.io/github/languages/code-size/wandersonsousa/simplang?style=centerme) ![](https://img.shields.io/github/issues-raw/wandersonsousa/simplang?style=centerme)
 
 <br><br>
