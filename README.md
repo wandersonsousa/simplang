@@ -5,67 +5,65 @@
 <br><br>
 
 ![](https://i.ibb.co/FVYMBfh/ezgif-com-gif-maker.gif")
+Simplang is an online pseudo-code execution environment that simulates a machine language.
 
-Simplang é um ambiente online para execução de pseudo-código que simula uma linguagem de máquina.
-
-- Digite o código no editor
-- Veja as alterações na memória e no registrador ao lado
+- Enter the code in the editor
+- See changes in memory and register on the side
 - ✨Magic ✨
 
 
-## Documentação das intruções da linguagem
+## Documentation of language instructions
 
-Antes de iniciar precisamos definir algumas considerações a respeito do ambiente de execução simulado da simplang:
-1° O ambiente possui uma memória com 100 células disponíveis.
-2° O ambiente tem apenas 1 registrador.
-3° A linguagem aceita apenas uma instrução por linha, qualquer instrução a mais será ignorada pelo interpretador.
+Before starting, we need to define some considerations regarding simplang's simulated runtime environment:
+1° The environment has a memory with 100 cells available.
+2° The environment has only 1 register.
+3° The language only accepts one instruction per line, any further instruction will be ignored by the interpreter.
 
-Mapa de caractéres: N = posição de célula na memória, I = um número inteiro qualquer.
+Character map: N = cell position in memory, I = any integer.
 
-É só isso, agora vamos lá:
-- load N - carrega um valor da memória no registrador
-- add N - adiciona o valor de N ao valor no registrador
-- sub N - subtrai o valor de N ao valor no registrador
-- div N - divide o valor de N pelo valor no registrador
-- mul N - multiplica o valor de N com o valor no registrador
-- addi I - adiciona o inteiro I ao valor no registrador
-- subi I - subtrai o inteiro I ao valor no registrador
-- divi I - divide o inteiro I pelo valor no registrador
-- muli I - multiplica o inteiro I com o valor no registrador
-- store N - salva o valor atual do registrador na memporia em N
+That's all, now let's go:
+- load N - loads a value from memory into the register
+- add N - adds the value of N to the value in the register
+- sub N - subtracts the value of N from the value in the register
+- div N - divides the value of N by the value in the register
+- mul N - multiplies the value of N with the value in the register
+- addi I - adds the integer I to the value in the register
+- subi I - subtracts the integer I from the value in the register
+- divi I - divides the integer I by the value in the register
+- muli I - multiplies the integer I with the value in the register
+- store N - saves the current value of the register in memory at N
 
-_Utilize essas instruções, adicione um pouco de lógica, e você verá como as coisas funcionam por debaixo dos panos :)_
+_Use these instructions, add a little logic, and you'll see how things work under the hood :)_
 
 ## Tech
 
-Simplang utiliza estas tecnologias:
+Simplang uses these technologies:
 
-- PHP - Toda o servidor e engine foram feitas com essa belezinha
-- Javascript - Alterações no DOM e comunicação com a engine por ajax
-- Bootstrap - Estilização dos componentes da tela
+- PHP - The entire server and engine were made with this beauty
+- Javascript - DOM changes and communication with the engine by ajax
+- Bootstrap - Styling of screen components
 
-## Instalação Local
+## Local Installation
 
-Se você quiser rodar a Simplang em  seu ambiente local, basta fazer download do projeto e adicionar ao servidor PHP na sua máquina, após isso basta acessar o arquivo index.php, simples, não ?
+If you want to run Simplang in your local environment, just download the project and add it to the PHP server on your machine, after that, just access the index.php file, simple, right?
 
 ## Development
 
-Gostaria de contribuir ?
+Would you like to contribute?
 
-Uma das formas é nos enviando uma issue com alguma sugestão para o ambiente.
+One way is to send us an issue with a suggestion for the environment.
 
-A outra é nos enviando um pull-request com sua própria modificação do código:
+The other is sending us a pull-request with your own code modification:
 
-Clone o repositório em seu servidor php
+Clone the repository on your php server
 ```sh
 git clone https://github.com/wandersonsousa/simplang.git
 ```
 
-Agora, basta adicionar suas modificações, e enviar um pull-request ao projeto.
+Now, just add your modifications, and send a pull-request to the project.
 
 ## License
 
 MIT
 
 **Free Software, Hell Yeah!**
-
